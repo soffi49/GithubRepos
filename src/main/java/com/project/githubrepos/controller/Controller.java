@@ -1,16 +1,12 @@
 package com.project.githubrepos.controller;
 
-import com.project.githubrepos.reposinfo.RepositoryGithub;
 import com.project.githubrepos.reposinfo.User;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
-import java.io.Console;
 import java.io.IOException;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 
 @RestController
 @Validated
