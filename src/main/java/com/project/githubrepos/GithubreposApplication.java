@@ -21,14 +21,6 @@ public class GithubreposApplication {
 
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(GithubreposApplication.class, args);
-		List<RepositoryGithub> repos=new ObjectMapper().readValue(new URL(json), new TypeReference<List<RepositoryGithub>>(){});
-		User u=new User();
-		u.saveRepos("soffi49");
-
-		for(RepositoryGithub el : repos)
-		{
-			System.out.println(el.getName()+" "+el.getStars());
-		}
 	}
 
 }
