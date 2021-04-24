@@ -24,6 +24,14 @@ public class User {
     {
         return repos;
     }
+    public void setName(String name)
+    {
+        this.name=name;
+    }
+    public String getName()
+    {
+        return this.name;
+    }
 
     public void saveRepos(String name) throws IOException
     {
@@ -33,5 +41,17 @@ public class User {
         URL url=new URL(json);
         this.repos=new ObjectMapper().readValue(url, new TypeReference<>(){});
     }
+
+    public int countStars()
+    {
+        int sum=0;
+        for(RepositoryGithub g:repos)
+        {
+            sum+=g.getStars();
+        }
+        return sum;
+    }
+
+
 
 }

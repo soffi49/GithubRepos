@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Provide user</title>
+</head>
+<body>
+<h1>Provide user</h1>
+<form action="#" th:action="@{/}" th:object="${user}" method="post">
+    <p>
+        Name: <input id="nameform" type="text" th:field="*{name}">
+    </p>
+    <p th:if="${#fields.hasErrors('name')}">The given name has incorrect format.</p>
+    <p>
+        <input type="submit" value="Submit"/>
+    </p>
+</form>
+</body>
+</html>
