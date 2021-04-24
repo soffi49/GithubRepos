@@ -17,7 +17,8 @@
         <p id="data">
             <label for="user">Name:</label> <input type="text" id="user" th:field="*{name}">
         </p>
-        <p id="error" th:if="${#fields.hasErrors('name')}">The given name has incorrect format.</p>
+        <p class="error" th:if="${#fields.hasErrors('name')}">The given name has incorrect format.</p>
+        <p class="error" th:if="${user.repos.isEmpty()}">User has no repositories</p>
         <p id="button">
             <input type="submit" value="SUBMIT"/>
         </p>

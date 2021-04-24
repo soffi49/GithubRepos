@@ -34,7 +34,7 @@ hr{
 #data input{
     height: 20px;
 }
-#error{
+.error{
     color: rgba(83, 83, 83, 0.8);
     margin-left: 10px;
     position: relative;

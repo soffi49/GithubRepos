@@ -36,7 +36,6 @@ public class User {
     public void saveRepos(String name) throws IOException
     {
         this.name=name;
-        System.out.println(this.name);
         String json="https://api.github.com/users/"+name+"/repos";
         URL url=new URL(json);
         this.repos=new ObjectMapper().readValue(url, new TypeReference<>(){});
