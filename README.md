@@ -16,7 +16,7 @@ It is really simple:
 ## How to use it 🔧
 The program will communicate with your local host. Thus to use it, firstly run your program (using IDE run or terminal) and then simply go to `http://localhost:8080/` 
 on your browser.\
-I provided a simple, user-friendly interface. You will see a form in which you can give a username. To submit the information, click submit button, and that's all.
+The goal of the task was to make software which will allow to list repositories but additionaly I provided a simple interface to make user experience more friendly. You will see a form in which you can give a username. To submit the information, click submit button, and that's all.
 ## Technologies used 💻
 For my project, I used `Spring Boot` with `Maven project` and dependencies:
 - `Validation`
