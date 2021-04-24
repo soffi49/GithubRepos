@@ -1,18 +1,38 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <title>Provide user</title>
+    <title>List repositories</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <script>
+        function showuser(){
+            $('#info').fadeIn(1000,"swing");
+        }
+    </script>
 </head>
 <body>
-<h1>Provide user</h1>
-<form action="#" th:action="@{/}" th:object="${user}" method="post">
-    <p>
-        Name: <input id="nameform" type="text" th:field="*{name}">
-    </p>
-    <p th:if="${#fields.hasErrors('name')}">The given name has incorrect format.</p>
-    <p>
-        <input type="submit" value="Submit"/>
-    </p>
-</form>
+<div id="main">
+    <h1>PROVIDE USER</h1>
+    <hr>
+    <form action="#" th:action="@{/}" th:object="${user}" method="post">
+        <p id="data">
+            <label for="user">Name:</label> <input type="text" id="user" th:field="*{name}">
+        </p>
+        <p id="error" th:if="${#fields.hasErrors('name')}">The given name has incorrect format.</p>
+        <p id="button">
+            <input type="submit" value="SUBMIT"/>
+        </p>
+    </form>
+</div>
+<div id="info" th:if="${!user.repos.isEmpty()} ">
+    <p id="usern" th:text="${user.name}"></p>
+    <hr>
+    <table>
+        <tr th:each="repo:${user.getRepos()}">
+            <td th:text="${repo.name}+' : '+${repo.stars}"></td>
+        </tr>
+    </table>
+    <hr>
+    <p id="stars" th:text="'All stars: '+${user.countStars()}"></p>
+</div>
 </body>
 </html>

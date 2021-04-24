@@ -1,0 +1,84 @@
+body{
+    background-color: #dddddd;
+    font-family: Tahoma, Arial, serif;
+    font-weight: 100;
+}
+#main{
+    position: relative;
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 2px 4px 11px -1px rgba(115, 114, 115, 0.78);
+}
+#main h1{
+    color: #c34343;
+    padding-top: 20px;
+    margin-left: 10px;
+    font-family: Tahoma, Arial, serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+hr{
+    border: none;
+    background-color: rgba(171, 171, 171, 0.9);
+    width: 80%;
+    height: 2px;
+    margin-left: 0;
+}
+#data{
+    color: rgba(83, 83, 83, 0.9);
+    font-size: 20px;
+    margin-left: 10px;
+}
+#data input{
+    height: 20px;
+}
+#error{
+    color: rgba(83, 83, 83, 0.8);
+    margin-left: 10px;
+    position: relative;
+}
+#button{
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    position: relative;
+}
+#button input{
+    text-decoration: none;
+    background-color: #c34343;
+    color: #dddddd;
+    height: 40px;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+}
+#button input:hover{
+    background-color: #863131;
+}
+#button input:active{
+    background-color: #c34343;
+}
+#info{
+    background-color: #913030;
+    margin: auto;
+    top: 10px;
+    width: 600px;
+    color: #dddddd;
+}
+#usern{
+    margin-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 2px;
+    font-size: 25px;
+}
+#info table{
+    margin-left: 20px;
+}
+#stars{
+    padding-bottom: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 2px;
+}

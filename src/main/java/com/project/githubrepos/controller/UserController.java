@@ -26,12 +26,11 @@ public class UserController{
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String printRepos(@Valid @ModelAttribute("user") User user, BindingResult bin) throws IOException
     {
-        if(bin.hasErrors())
+        if(!bin.hasErrors())
         {
-            return "getUser";
+            user.saveRepos(user.getName());
         }
-        user.saveRepos(user.getName());
-        return "printRepos";
+        return "getUser";
     }
 
 }
